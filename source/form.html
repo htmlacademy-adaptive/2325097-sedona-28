@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Город Седона</title>
+</head>
+
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo" href="#">
+      <img class="main-header__logo-image" src="img/logo/logotype.svg" width="185" height="96"
+        alt="Логотип сайта города Седона">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="#">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Htmlacademy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="main-container">
+    <h1 class="visually-hidden">Официальный сайт города Седона</h1>
+    <section class="intro">
+      <div class="intro__wrapper">
+        <h2 class="visually-hidden">Добро пожаловать</h2>
+        <img class="intro-welcome" src="img/intro/sedona.svg" width="229" height="39" alt="Sedona">
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="reviews__wrapper">
+        <header class="reviews-header">
+          <h2 class="reviews__title">Оставьте свой отзыв</h2>
+          <p class="reviews__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </header>
+        <form class="reviws__form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="reviws__form__group">
+            <legend class="reviws__form__group__title">Представьтесь:</legend>
+            <ul class="reviws__form__group__list">
+              <li class="reviws__form__group__item">
+                <label>Имя*
+                  <input type="text" value="Петр" placeholder="Имя" required>
+                </label>
+              </li>
+              <li class="reviws__form__group__item">
+                <label>Фамилия*
+                  <input type="text" value="Пустота" placeholder="Фамилия" required>
+                </label>
+              </li>
+              <li class="reviws__form__group__item">
+                <label>Отчество
+                  <input type="text" value="Викторович" placeholder="Отчество" required>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="reviws__form__group">
+            <legend class="reviws__form__group__title">Контактная информация:</legend>
+            <ul class="reviws__form__group__list">
+              <li class="reviws__form__group__item">
+                <label>Контактный телефон*:
+                  <input type="tel" value="" placeholder="Введите телефон" required>
+                </label>
+              </li>
+              <li class="reviws__form__group__item">
+                <label>Электронная почта*:
+                  <input type="email" value="" placeholder="Введите e-mail" required>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="reviws__form__group">
+            <legend class="reviws__form__group__title">Ваше общее впечатление:</legend>
+            <ul class="reviws__form__group__list filter__list">
+              <li class="reviws__form__group__item filter__item">
+                <label>
+                  <input type="radio" checked>
+                  Скорее положительное
+                </label>
+              </li>
+              <li class="reviws__form__group__item filter__item">
+                <label>
+                  <input type="radio">
+                  Скорее отрицательное
+                </label>
+              </li>
+              <li class="reviws__form__group__item filter__item">
+                <label>
+                  <input type="radio">
+                  Затрудняюсь ответить
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="reviws__form__group">
+            <legend class="reviws__form__group__title">Посещенные достопримечательности:</legend>
+            <ul class="reviws__form__group__list filter__list">
+              <li class="reviws__form__group__item filter__item">
+                <label>
+                  <input type="checkbox" name="bridge" checked>
+                  Мост дьявола
+                </label>
+              </li>
+              <li class="reviws__form__group__item filter__item">
+                <label>
+                  <input type="checkbox" name="hill" checked>
+                  Гора-Колокол
+                </label>
+              </li>
+              <li class="reviws__form__group__item filter__item">
+                <label>
+                  <input type="checkbox" name="park" checked>
+                  Слайд-парк
+                </label>
+              </li>
+              <li class="reviws__form__group__item filter__item">
+                <label>
+                  <input type="checkbox" name="rocks">
+                  Красные скалы
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="reviws__form__group">
+            <legend class="reviws__form__group__title">Опишите свои эмоции:</legend>
+            <label>
+              <textarea placeholder="Опишите подробно все свои восторги"></textarea>
+            </label>
+          </fieldset>
+          <button class="reviews__button button" type="submit">Отправить отзыв</button>
+        </form>
+      </div>
+  </main>
+  <footer class="main-footer">
+    <div class="main-footer__wrapper">
+      <h2 class="visually-hidden">Контакты</h2>
+      <p class="main-footer__text">#visitSEDONA</p>
+      <ul class="main-footer__social social__list">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы в Контакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы в Ютубе</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в Телеграме</span>
+          </a>
+        </li>
+      </ul>
+      <div class="main-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
