@@ -18,13 +18,13 @@
       </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item">
             <a href="#">Главная</a>
           </li>
           <li class="site-list__item">
             <a href="#">Фото и видео</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a href="#">Форма отзыва</a>
           </li>
           <li class="site-list__item">
@@ -39,7 +39,7 @@
     <section class="intro">
       <div class="intro__wrapper">
         <h2 class="visually-hidden">Добро пожаловать</h2>
-        <img class="intro-welcome" src="img/intro/sedona.svg" width="229" height="39" alt="Sedona">
+        <img class="intro__image" src="img/intro/sedona.svg" width="229" height="39" alt="Sedona">
       </div>
     </section>
     <section class="reviews">
@@ -48,101 +48,125 @@
           <h2 class="reviews__title">Оставьте свой отзыв</h2>
           <p class="reviews__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </header>
-        <form class="reviws__form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="reviws__form__group">
-            <legend class="reviws__form__group__title">Представьтесь:</legend>
-            <ul class="reviws__form__group__list">
-              <li class="reviws__form__group__item">
-                <label>Имя*
-                  <input type="text" value="Петр" placeholder="Имя" required>
+        <form class="reviews__form form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="form-group">
+            <legend class="form-group__title">Представьтесь:</legend>
+            <ul class="form-list">
+              <li class="form-list__item">
+                <label class="form__label">Имя<sup>*</sup>
+                  <input class="form__field" type="text" value="Петр" placeholder="Имя" name="first-name" required>
                 </label>
               </li>
-              <li class="reviws__form__group__item">
-                <label>Фамилия*
-                  <input type="text" value="Пустота" placeholder="Фамилия" required>
+              <li class="form-list__item">
+                <label class="form__label">Фамилия<sup>*</sup>
+                  <input class="form__field" type="text" value="Пустота" placeholder="Фамилия" name="surname" required>
                 </label>
               </li>
-              <li class="reviws__form__group__item">
-                <label>Отчество
-                  <input type="text" value="Викторович" placeholder="Отчество" required>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="reviws__form__group">
-            <legend class="reviws__form__group__title">Контактная информация:</legend>
-            <ul class="reviws__form__group__list">
-              <li class="reviws__form__group__item">
-                <label>Контактный телефон*:
-                  <input type="tel" value="" placeholder="Введите телефон" required>
-                </label>
-              </li>
-              <li class="reviws__form__group__item">
-                <label>Электронная почта*:
-                  <input type="email" value="" placeholder="Введите e-mail" required>
+              <li class="form-list__item">
+                <label class="form__label">Отчество
+                  <input class="form__field" type="text" value="Викторович" placeholder="Отчество" name="second-name">
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="reviws__form__group">
-            <legend class="reviws__form__group__title">Ваше общее впечатление:</legend>
-            <ul class="reviws__form__group__list filter__list">
-              <li class="reviws__form__group__item filter__item">
-                <label>
-                  <input type="radio" checked>
-                  Скорее положительное
+          <fieldset class="form-group">
+            <legend class="form-group__title">Контактная информация:</legend>
+            <ul class="form-list">
+              <li class="form-list__item">
+                <label class="form__label">Контактный телефон<sup>*</sup>:
+                  <input class="form__field" type="tel" value="" placeholder="Введите телефон" name="phone" required>
                 </label>
               </li>
-              <li class="reviws__form__group__item filter__item">
-                <label>
-                  <input type="radio">
-                  Скорее отрицательное
-                </label>
-              </li>
-              <li class="reviws__form__group__item filter__item">
-                <label>
-                  <input type="radio">
-                  Затрудняюсь ответить
+              <li class="form-list__item">
+                <label class="form__label">Электронная почта<sup>*</sup>:
+                  <input class="form__field" type="email" value="" placeholder="Введите e-mail" name="e-mail" required>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="reviws__form__group">
-            <legend class="reviws__form__group__title">Посещенные достопримечательности:</legend>
-            <ul class="reviws__form__group__list filter__list">
-              <li class="reviws__form__group__item filter__item">
-                <label>
-                  <input type="checkbox" name="bridge" checked>
-                  Мост дьявола
+          <fieldset class="form-group">
+            <legend class="form-group__title">Ваше общее впечатление:</legend>
+            <ul class="form-list filter">
+              <li class="filter__item">
+                <label class="filter__control">
+                  <input class="visually-hidden filter__input" type="radio" name="reviews-group" value="positive"
+                    checked>
+                  <span class="filter__mark"></span>
+                  <span class="filter__label">Скорее положительное</span>
                 </label>
               </li>
-              <li class="reviws__form__group__item filter__item">
-                <label>
-                  <input type="checkbox" name="hill" checked>
-                  Гора-Колокол
+              <li class="filter__item">
+                <label class="filter__control">
+                  <input class="visually-hidden filter__input" type="radio" name="reviews-group" value="negative">
+                  <span class="filter__mark"></span>
+                  <span class="filter__label">Скорее отрицательное</span>
                 </label>
               </li>
-              <li class="reviws__form__group__item filter__item">
-                <label>
-                  <input type="checkbox" name="park" checked>
-                  Слайд-парк
-                </label>
-              </li>
-              <li class="reviws__form__group__item filter__item">
-                <label>
-                  <input type="checkbox" name="rocks">
-                  Красные скалы
+              <li class="filter__item">
+                <label class="filter__control">
+                  <input class="visually-hidden filter__input" type="radio" name="reviews-group" value="embarrassing">
+                  <span class="filter__mark"></span>
+                  <span class="filter__label">Затрудняюсь ответить</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="reviws__form__group">
-            <legend class="reviws__form__group__title">Опишите свои эмоции:</legend>
+          <fieldset class="form-group">
+            <legend class="form-group__title">Посещенные достопримечательности:</legend>
+            <ul class="form-list filter">
+              <li class="filter__item">
+                <label>
+                  <input class="visually-hidden filter__input" type="checkbox" name="bridge" checked>
+                  <span class="filter__mark"></span>
+                  <span class="filter__label">Мост дьявола</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label>
+                  <input class="visually-hidden filter__input" type="checkbox" name="hill" checked>
+                  <span class="filter__mark"></span>
+                  <span class="filter__label">Гора-Колокол</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label>
+                  <input class="visually-hidden filter__input" type="checkbox" name="park" checked>
+                  <span class="filter__mark"></span>
+                  <span class="filter__label">Слайд-парк</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label>
+                  <input class="visually-hidden filter__input" type="checkbox" name="rocks">
+                  <span class="filter__mark"></span>
+                  <span class="filter__label">Красные скалы</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form-group">
+            <legend class="form-group__title">Опишите свои эмоции:</legend>
             <label>
-              <textarea placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea placeholder="Опишите подробно все свои восторги" name="comment" id="message"></textarea>
             </label>
           </fieldset>
-          <button class="reviews__button button" type="submit">Отправить отзыв</button>
+          <button class="form__button button" type="submit">Отправить отзыв</button>
+          <small form__legend>* - обязательные поля</small>
+          <!--Модальное окно-->
+          <div class="popover popover-cart">
+            <div class="popover__content">
+              <h2 class="popover__title">Что-то пошло не так!</h2>
+              <p class="popover__message">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+              <button class="popover__button button" type="button">Ок</button>
+            </div>
+          </div>
+          <div class="popover popover-cart">
+            <div class="popover__content">
+              <h2 class="popover__title">Ваш отзыв отправлен</h2>
+              <p class="popover__message">Ваш отзыв отправлен! Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+              <button class="popover__button popover__button--close button" type="button">Закрыть окно</button>
+            </div>
+          </div>
         </form>
       </div>
   </main>
@@ -150,7 +174,7 @@
     <div class="main-footer__wrapper">
       <h2 class="visually-hidden">Контакты</h2>
       <p class="main-footer__text">#visitSEDONA</p>
-      <ul class="main-footer__social social__list">
+      <ul class="main-footer__social social">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы в Контакте</span>
@@ -176,4 +200,5 @@
     </div>
   </footer>
 </body>
+
 </html>
