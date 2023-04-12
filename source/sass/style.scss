@@ -1,1 +1,33 @@
-// Начните писать стили здесь
+// Добавляем миксины и переменные
+
+
+// Добавляем базовые стили
+
+@import "./base/common.scss";
+@import "./base/fonts.scss";
+@import "./base/visually-hidden.scss";
+
+// Добавляем блоки компонентов
+
+@import "./blocks/page__body.scss";
+
+// header
+
+@import "./blocks/header/main-header.scss";
+@import "./blocks/header/main-nav.scss";
+@import "./blocks/header/site-list.scss";
+
+// main
+
+@import "./blocks/main/main-container.scss";
+@import "./blocks/main/intro.scss";
+@import "./blocks/main/advantages.scss";
+@import "./blocks/main/search.scss";
+@import "./blocks/main/map.scss";
+
+// footer
+
+@import "./blocks/footer/main-footer.scss";
+@import "./blocks/footer/social.scss";
+@import "./blocks/footer/copyright.scss";
+
